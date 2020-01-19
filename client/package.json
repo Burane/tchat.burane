@@ -5,14 +5,27 @@
   "main": "src/app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "electron": "^7.1.9",
     "express": "^4.17.1",
     "express-hbs": "^2.3.0",
     "socket.io": "^2.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^7.1.9",
+    "electron-builder": "^22.2.0"
+  },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "productName": "tchat_burane",
+    "appId": "fr.burane.tchat_burane",
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
   },
   "author": "",
   "license": "ISC"
