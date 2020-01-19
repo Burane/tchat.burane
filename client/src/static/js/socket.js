@@ -1,4 +1,4 @@
-const ipAddress = 'http://localhost:3100/'
+const ipAddress = 'http://burane.fr:3100/'
 const socket = io(ipAddress)
 
 document.getElementById('sendMsg').onclick = sendMsg
